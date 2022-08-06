@@ -103,10 +103,7 @@ const renderPlayerMovesBlock = (container) => {
   const moves = document.createElement("div");
   moves.classList.add("moves");
 
-  moves.appendChild(rockButton);
-  moves.appendChild(paperButton);
-  moves.appendChild(scissorsButton);
-  container.appendChild(moves);
+  [rockButton, paperButton, scissorsButton].forEach((el) => moves.appendChild(el));
 };
 
 window.application.blocks["player-moves"] = renderPlayerMovesBlock;
